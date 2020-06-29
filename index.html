@@ -70,7 +70,9 @@
   // event delegation
   function toggleDone(e) {
       if(!e.target.matches('input')) return; // skip this unless it's an input
-    console.log(e)
+      // console.log(e)
+      const el = e.target;
+      console.log(el.dataset.index);
   };
 
   // listen for submit when sommeone clicks enter
