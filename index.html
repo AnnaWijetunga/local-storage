@@ -48,8 +48,8 @@
     populateList(items, itemsList);
 
     // set this items array into local storage
-    localStorage.setItem('items', items); // neet to input a string
-    
+    localStorage.setItem('items', JSON.stringify(items)); // neet to input a string
+
 
     this.reset(); // clear form after submitting
   };
