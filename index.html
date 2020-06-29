@@ -50,7 +50,13 @@
 
   // default, plates is an empty object
   function populateList(plates = [], platesList) {
-    
+    platesList.innerHTML = plates.map((plate, i) => {
+        // loop over every item in our array
+        return `
+
+        `;
+    })
+
   };
 
 
