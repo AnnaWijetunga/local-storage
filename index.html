@@ -46,7 +46,9 @@
 
     items.push(item);
     populateList(items, itemsList);
+
     // set this items array into local storage
+    localStorage.setItem('items', items);
     
     this.reset(); // clear form after submitting
   };
