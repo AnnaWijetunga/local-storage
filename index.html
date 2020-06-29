@@ -77,9 +77,11 @@
   // added item persists upon refresh
   populateList(items, itemsList);
 
-  const checkBoxes = document.querySelectorAll('input');
+//   const checkBoxes = document.querySelectorAll('input');
 
-  checkBoxes.forEach(input => input.addEventListener('click', () => alert('hi')));
+//   checkBoxes.forEach(input => input.addEventListener('click', () => alert('hi')));
+
+  itemsList.addEventListener('click', toggleDone);
 
 </script>
 
