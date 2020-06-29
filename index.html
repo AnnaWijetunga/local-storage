@@ -36,9 +36,14 @@
   function addItem(e) {
     // stop page from automatically reloading/refreshing
     e.preventDefault();
-    console.log('Hello');
-
-  }
+    // console.log('Hello');
+    // this grabs the form info
+    const text = this.querySelector('[name=item]');
+    const item = {
+        text: 'Item name',
+        done: false
+    }
+  };
 
 
 </script>
