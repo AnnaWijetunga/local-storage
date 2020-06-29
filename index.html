@@ -68,20 +68,22 @@
   };
 
   function toggleDone(e) {
-
+      if(!e.target.matches('input')) return; // skip this unless it's an input
+    console.log(e)
   };
 
   // listen for submit when sommeone clicks enter
   addItems.addEventListener('submit', addItem);
-  
-  // added item persists upon refresh
-  populateList(items, itemsList);
+
 
 //   const checkBoxes = document.querySelectorAll('input');
 
 //   checkBoxes.forEach(input => input.addEventListener('click', () => alert('hi')));
 
   itemsList.addEventListener('click', toggleDone);
+
+  // added item persists upon refresh
+  populateList(items, itemsList);
 
 </script>
 
