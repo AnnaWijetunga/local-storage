@@ -28,11 +28,9 @@
 <script>
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
-  const items = [];
+  // Get item from local storage OR empty array
+  const items = JSON.parse(localStorage.getItem('items')) || [];
 
-  // listen for submit when sommeone clicks enter
-  addItems.addEventListener('submit', addItem);
-  
   function addItem(e) {
     // stop page from automatically reloading/refreshing
     e.preventDefault();
@@ -69,6 +67,10 @@
     }).join('');
   };
 
+  // listen for submit when sommeone clicks enter
+  addItems.addEventListener('submit', addItem);
+  
+  populateList(items, itemsList);
 
 
 </script>
