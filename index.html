@@ -45,6 +45,7 @@
     };
 
     items.push(item);
+    populateList(items, itemsList);
     this.reset(); // clear form after submitting
   };
 
@@ -53,10 +54,11 @@
     platesList.innerHTML = plates.map((plate, i) => {
         // loop over every item in our array
         return `
-
+            <li>
+                <label for="">${plate.text}</label>
+            </li>
         `;
-    })
-
+    }).join('');
   };
 
 
