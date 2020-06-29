@@ -38,11 +38,12 @@
     e.preventDefault();
     // console.log('Hello');
     // this grabs the form info
-    const text = this.querySelector('[name=item]');
+    const text = (this.querySelector('[name=item]')).value;
     const item = {
-        text: 'Item name',
+        text, // ES6 short hand for text: text
         done: false
-    }
+    };
+    this.reset(); // clear form after submitting
   };
 
 
